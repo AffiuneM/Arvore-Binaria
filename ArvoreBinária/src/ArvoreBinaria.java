@@ -29,7 +29,7 @@ public class ArvoreBinaria {
         	System.out.print(node.getValor() + " ");//raiz no começo
         ImprimePreOrdem(node.getNodeLeft());//subarvore esquerda
         ImprimePreOrdem(node.getNodeRight());//subarvore direita
-}
+    }
    
     public void ImprimePosOrdem (Node node){
         if (node == null)
@@ -38,7 +38,7 @@ public class ArvoreBinaria {
         ImprimePosOrdem(node.getNodeLeft());//subarvore esquerda
         ImprimePosOrdem(node.getNodeRight());//subarvore direita
         	System.out.print(node.getValor() + " ");//raiz no fim
-}
+    }
     
     public boolean EstritamenteBinaria(Node node) {
     	if (node == null)
@@ -50,5 +50,22 @@ public class ArvoreBinaria {
     	return EstritamenteBinaria(node.getNodeLeft()) && //atravez de recursividade, voltar nos filhos e fazer o metodo novamente, para percorrer toda a árvore
     		   EstritamenteBinaria(node.getNodeRight());
     }
+    
+    public int QuantidadeNos (Node node) {
+	    if (node == null) {
+	        return 0;
+	    } else {
+	        return (QuantidadeNos(node.getNodeRight()) + QuantidadeNos(node.getNodeLeft()) + 1);//recursividade para contar todos os nós
+	    }
+	}
+    
+    public int Profundidade (Node tree) {
+	    if (tree == null) {
+	        return 0;
+	    } else 
+	    	return Math.max(Profundidade(tree.getNodeLeft()), 
+	    			Profundidade(tree.getNodeRight()))+1;
+	    
+	}
     
 }
