@@ -1,6 +1,7 @@
 
 public class Node {
-	private String valor;
+	
+    private String valor;
     private Node nodeLeft, nodeRight;
 	
     public String getValor() {
@@ -29,10 +30,10 @@ public class Node {
 	}
 	public String external() { //verifica se é folha
 		if (nodeLeft == null && nodeRight == null) {
-			return valor + " é folha!";
+			return "'" + valor + "'" + " é folha!";
 		}
 		else {		
-			return valor + " não é folha!";
+			return "'" + valor + "'" + " não é folha!";
 		}
 	}
 	public int length() { //retorna o grau dos nos
@@ -43,8 +44,3 @@ public class Node {
 		return 1;
 	}
 }
-
-
-
-
-
