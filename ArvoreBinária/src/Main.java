@@ -33,10 +33,12 @@ public class Main {
 			System.out.print("\nPós Ordem: ");
 		arvoreBinariaTeste.ImprimePosOrdem(Raiz);
 		
-		//verificar se é estritamente binária
+		//verificar métodos da classe Arvore Binaria
 		
-			System.out.println("\nÉ estritamente binária: ");
-		System.out.println(arvoreBinariaTeste.EstritamenteBinaria(Raiz));
+		System.out.println("\nÉ estritamente binária: ");
+			System.out.println(arvoreBinariaTeste.EstritamenteBinaria(Raiz));
+		System.out.println("Quantidade de nós: " + arvoreBinariaTeste.QuantidadeNos(Raiz));
+		System.out.println("Profundidade: " + arvoreBinariaTeste.Profundidade(Raiz));
 		
 		//analizar se são folhas e quantos graus cada nó possui	
 		
@@ -54,8 +56,6 @@ public class Main {
 			System.out.println("Grau: " + F.length());
 		System.out.println(G.external());
 			System.out.println("Grau: " + G.length());
-		
-		
+	
 	}
-
 }
