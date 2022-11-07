@@ -3,8 +3,6 @@ public class ArvoreBinaria {
 
     Node raiz;
     
-    
-    
     public Node getRaiz() {//retorna raiz
 		return raiz;
 	}
